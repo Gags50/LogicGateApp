@@ -2303,6 +2303,7 @@ GameObject:
   - component: {fileID: 818664088}
   - component: {fileID: 818664087}
   - component: {fileID: 818664086}
+  - component: {fileID: 818664089}
   m_Layer: 5
   m_Name: Opgave 2
   m_TagString: Untagged
@@ -2373,7 +2374,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 818664087}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 818664089}
+        m_TargetAssemblyTypeName: ButtonBehaviour, Assembly-CSharp
+        m_MethodName: puzzleToggle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &818664087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2412,6 +2425,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 818664084}
   m_CullTransparentMesh: 1
+--- !u!114 &818664089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818664084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ec0377d241d5af49a025ce00ae54845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &829114367
 GameObject:
   m_ObjectHideFlags: 0

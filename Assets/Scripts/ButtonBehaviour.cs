@@ -3,8 +3,6 @@ using UnityEngine;
 public class ButtonBehaviour : MonoBehaviour
 {
     GameObject canvas;
-    GameObject spawnedPuzzle;
-    GameObject spawnedTip;
     bool activePuzzle = false;
     bool activeTip = false;
 
@@ -16,12 +14,11 @@ public class ButtonBehaviour : MonoBehaviour
     {
         if (activePuzzle == false)
         {
-            spawnedPuzzle = Instantiate(puzzle, Vector3.zero, Quaternion.identity, canvas.transform);
+            GameManager.instance.spawnedPuzzle = Instantiate(puzzle, canvas.transform);
         }
-
         else
         {
-            Destroy(spawnedPuzzle);
+            Destroy(GameManager.instance.spawnedPuzzle);
         }
     }
 
@@ -29,12 +26,12 @@ public class ButtonBehaviour : MonoBehaviour
     {
         if (activeTip == false)
         {
-            spawnedTip = Instantiate(tip, Vector3.zero, Quaternion.identity, canvas.transform);
+            GameManager.instance.spawnedTip = Instantiate(tip, Vector3.zero, Quaternion.identity, canvas.transform);
         }
 
         else
         {
-            Destroy(spawnedTip);
+            Destroy(GameManager.instance.spawnedTip);
         }
     }
 }
