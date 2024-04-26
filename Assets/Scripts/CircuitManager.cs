@@ -52,8 +52,8 @@ public class CircuitManager : MonoBehaviour
     public static async void PublishTest()
     {
         var applicationMessage = new MqttApplicationMessageBuilder()
-            .WithTopic("DDU4/DigitalLogik/unitytest")
-            .WithPayload("wokrs?")
+            .WithTopic("DDU4/DigitalLogik/unity_online")
+            .WithPayload("1")
             .Build();
 
         await k_mqttClient.PublishAsync(applicationMessage, CancellationToken.None);
