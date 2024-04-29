@@ -16,16 +16,16 @@ public class CircuitManager : MonoBehaviour
 
     private void Awake()
     {
-        k_mqttOptions = new MqttClientOptionsBuilder()
-            .WithTcpServer(k_server, k_port)
-            .WithTlsOptions(new MqttClientTlsOptionsBuilder().Build())
-            .WithClientId(k_clientID)
-            .Build();
         Setup();
     }
 
     public static async void Setup()
     {
+        k_mqttOptions = new MqttClientOptionsBuilder()
+            .WithTcpServer(k_server, k_port)
+            .WithTlsOptions(new MqttClientTlsOptionsBuilder().Build())
+            .WithClientId(k_clientID)
+            .Build();
         await ConnectClient();
         PublishTest();
         SubscribeToStatusChange();
@@ -85,5 +85,24 @@ public class CircuitManager : MonoBehaviour
         await k_mqttClient.SubscribeAsync(mqttSubscribeOptions, CancellationToken.None);
 
         Debug.Log("MQTT client subscribed to topic.");
+    }
+}
+
+public class CircuitState
+{
+    public bool in1, in2, in3, in4;
+    public bool out1, out2, out3, out4;
+
+    public CircuitState(bool in1, bool in2, bool in3, bool in4, bool out1, bool out2, bool out3, bool out4)
+    {
+        this.in1 = in1;
+        this.in2 = in2;
+        this.in3 = in3;
+        this.in4 = in4;
+
+        this.out1 = out1;
+        this.out2 = out2;
+        this.out3 = out3;
+        this.out4 = out4;
     }
 }
