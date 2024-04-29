@@ -14,7 +14,7 @@ public class CircuitManager : MonoBehaviour
     public static MqttClientOptions k_mqttOptions;
     public static IMqttClient k_mqttClient;
 
-    private void Start()
+    private void Awake()
     {
         k_mqttOptions = new MqttClientOptionsBuilder()
             .WithTcpServer(k_server, k_port)
