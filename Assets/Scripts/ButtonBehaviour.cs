@@ -3,7 +3,6 @@ using UnityEngine;
 public class ButtonBehaviour : MonoBehaviour
 {
     GameObject canvas;
-    bool activePuzzle = false;
     bool activeTip = false;
 
     private void Awake()
@@ -12,13 +11,15 @@ public class ButtonBehaviour : MonoBehaviour
     }
     public void puzzleToggle(GameObject puzzle)
     {
-        if (activePuzzle == false)
+        if (GameManager.instance.activePuzzle == false)
         {
             GameManager.instance.spawnedPuzzle = Instantiate(puzzle, canvas.transform);
+            GameManager.instance.activePuzzle = true;
         }
         else
         {
             Destroy(GameManager.instance.spawnedPuzzle);
+            GameManager.instance.activePuzzle = false;
         }
     }
 
