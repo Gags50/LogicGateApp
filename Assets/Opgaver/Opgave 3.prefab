@@ -108,14 +108,14 @@ RectTransform:
   m_GameObject: {fileID: 826920443126561501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.51002, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8938072977686120169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: -53}
+  m_AnchoredPosition: {x: 17, y: 22}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1478834627200018397
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 72715943d56136a438296343eb1274a2, type: 3}
+  m_Texture: {fileID: 2800000, guid: e526d02bcb6e06c4dbe2cf291b0d195d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -443,7 +443,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2, y: -92}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5330682653676575683
 CanvasRenderer:
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Descriptio
+  m_text: Lav en XOR port
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bf9614792c02bf946bb40f2c4dcaa15a, type: 2}
   m_sharedMaterial: {fileID: -2059050243042595166, guid: bf9614792c02bf946bb40f2c4dcaa15a, type: 2}
@@ -753,7 +753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Opgave - AND port
+  m_text: 'Opgave - XOR port
 
 '
   m_isRightToLeft: 0
