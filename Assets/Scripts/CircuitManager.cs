@@ -20,6 +20,7 @@ public class CircuitManager : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(this);
         Setup();
     }
 

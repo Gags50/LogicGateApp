@@ -970,7 +970,7 @@ MonoBehaviour:
         m_MethodName: puzzleToggle
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7966696060163791983, guid: 3dfda73c2a072e34fa5b1d420aaa35fa, type: 3}
+          m_ObjectArgument: {fileID: 7029185691534084152, guid: e2df26e66e35dd580bfed1644f611970, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
         m_MethodName: puzzleToggle
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7966696060163791983, guid: 18fb6bc58e8bce147b37b2d17749c8d5, type: 3}
+          m_ObjectArgument: {fileID: 7029185691534084152, guid: 2b4b973f150563802aabb1ec43b0598d, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1330,7 +1330,7 @@ MonoBehaviour:
         m_MethodName: puzzleToggle
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7966696060163791983, guid: 7442cf89662b181499d63be0b09e9fc5, type: 3}
+          m_ObjectArgument: {fileID: 7029185691534084152, guid: ac75973af69d16dbeae6cad59da72b48, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1768,7 +1768,7 @@ MonoBehaviour:
         m_MethodName: puzzleToggle
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7966696060163791983, guid: 11c20daa317c36646954ea5eb1826ed4, type: 3}
+          m_ObjectArgument: {fileID: 7029185691534084152, guid: f279363e60c16170ab10a0034a89086a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
