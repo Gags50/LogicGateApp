@@ -22,6 +22,7 @@ public class CircuitManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);
         Setup();
+
     }
 
     public static async void Setup()
@@ -33,7 +34,16 @@ public class CircuitManager : MonoBehaviour
             .Build();
         await ConnectClient();
         PublishTest();
-        SubscribeToStatusChange();
+        Subscribe();
+
+        // AND
+        TruthTable and = new TruthTable(new CircuitState[] {
+                new CircuitState(false, false, false, false, false, false, false, false),
+                new CircuitState(true, false, false, false, false, false, false, false),
+                new CircuitState(false, true, false, false, false, false, false, false),
+                new CircuitState(true, true, false, false, true, false, false, false),
+                });
+        SendTestResultRequest(and);
     }
 
     public static async Task ConnectClient()
@@ -66,7 +76,7 @@ public class CircuitManager : MonoBehaviour
         Debug.Log("MQTT application message is published.");
     }
 
-    public static async void SubscribeToStatusChange()
+    public static async void Subscribe()
     {
         // Setup message handling before connecting so that queued messages
         // are also handled properly. When there is no event handler attached all
@@ -75,13 +85,25 @@ public class CircuitManager : MonoBehaviour
         {
             Debug.Log("Received application message.");
             string data = e.ApplicationMessage.ConvertPayloadToString();
-            int stateInt = int.Parse(data);
-            byte state = (byte) stateInt;
-            Debug.Log(state);
+            Debug.Log(data);
+            switch(data[0])
+            {
+                // state change update
+                case 's':
+                    int stateInt = int.Parse(data);
+                    byte state = (byte) stateInt;
+                    Debug.Log(state);
 
-            CircuitState newState = CircuitState.FromBitmask(state);
-            StateChange?.Invoke(newState);
-            Debug.Log(newState.toString());
+                    CircuitState newState = CircuitState.FromBitmask(state);
+                    StateChange?.Invoke(newState);
+                    Debug.Log(newState.toString());
+                    break;
+
+                // result from circuittest
+                case 'r':
+                    break;
+            }
+
 
             return Task.CompletedTask;
         };
@@ -91,12 +113,27 @@ public class CircuitManager : MonoBehaviour
                 f =>
                 {
                     f.WithTopic("DDU4/DigitalLogik/state");
+                    f.WithTopic("DDU4/DigitalLogik/testresult");
                 })
             .Build();
 
         await k_mqttClient.SubscribeAsync(mqttSubscribeOptions, CancellationToken.None);
 
         Debug.Log("MQTT client subscribed to topic.");
+    }
+
+    public static async void SendTestResultRequest(TruthTable ttable)
+    {
+        string payload = ttable.ToPayload();
+        Debug.Log($"requesting: {payload}");
+        var applicationMessage = new MqttApplicationMessageBuilder()
+            .WithTopic("DDU4/DigitalLogik/testrequest")
+            .WithPayload(payload)
+            .Build();
+
+        await k_mqttClient.PublishAsync(applicationMessage, CancellationToken.None);
+
+        Debug.Log("MQTT application message is published.");
     }
 }
 
@@ -134,5 +171,36 @@ public class CircuitState
     }
     public string toString() {
         return $"{in1} {out1}\n{in2} {out2}\n{in3} {out3}\n{in4} {out4}";
+    }
+    public byte toPayload()
+    {
+        byte payload = (byte) (in1 ? 1 : 0);
+        payload |= (byte) ((in2 ? 1 : 0) << 1);
+        payload |= (byte) ((in3 ? 1 : 0) << 2);
+        payload |= (byte) ((in4 ? 1 : 0) << 3);
+
+        payload |= (byte) ((out1 ? 1 : 0) << 4);
+        payload |= (byte) ((out2 ? 1 : 0) << 5);
+        payload |= (byte) ((out3 ? 1 : 0) << 6);
+        payload |= (byte) ((out4 ? 1 : 0) << 7);
+        return payload;
+    }
+}
+
+public class TruthTable
+{
+    public CircuitState[] rows;
+
+    public TruthTable(CircuitState[] rows_) { this.rows = rows_; }
+
+    public string ToPayload()
+    {
+        string payload = "";
+        foreach (var row in rows)
+        {
+            payload += row.toPayload() + " ";
+        }
+
+        return payload;
     }
 }
