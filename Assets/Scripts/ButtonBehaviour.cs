@@ -3,7 +3,6 @@ using UnityEngine;
 public class ButtonBehaviour : MonoBehaviour
 {
     GameObject canvas;
-    bool activeTip = false;
 
     private void Awake()
     {
@@ -25,14 +24,15 @@ public class ButtonBehaviour : MonoBehaviour
 
     public void tipToggle(GameObject tip)
     {
-        if (activeTip == false)
+        if (GameManager.instance.activeTip == false)
         {
-            GameManager.instance.spawnedTip = Instantiate(tip, Vector3.zero, Quaternion.identity, canvas.transform);
+            GameManager.instance.spawnedTip = Instantiate(tip, canvas.transform);
+            GameManager.instance.activeTip = true;
         }
-
         else
         {
             Destroy(GameManager.instance.spawnedTip);
+            GameManager.instance.activeTip = false;
         }
     }
 }
