@@ -149,7 +149,7 @@ MonoBehaviour:
     output. Det samme princip g\xE6lder for NOR-porte, som giver det omvendte output
     af OR-porte, samt XNOR-porte, som er omvendte XOR-porte.\r\n\nKan du regne ud,
     hvordan man kan lave en NAND-port, kun ved hj\xE6lp af en AND-port og en NOT-port?
-    Brug output o0 for evaluering."
+    Brug output o<sub>0</sub> for evaluering."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
