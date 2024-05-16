@@ -142,11 +142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8193025307809137701, guid: 487974074a3d394b387c7e029be92338, type: 3}
       propertyPath: m_text
-      value: 'Lav I0*I1+I2:'
+      value: 'Lav i<sub>o</sub> x i<sub>1</sub>+i<sub>2:'
       objectReference: {fileID: 0}
     - target: {fileID: 8534882085284172725, guid: 487974074a3d394b387c7e029be92338, type: 3}
       propertyPath: m_text
-      value: Oppgave 5 - Boolean Expressions
+      value: Opgave 5 - Boolean Expressions
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2460264180051110163, guid: 487974074a3d394b387c7e029be92338, type: 3}

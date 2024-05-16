@@ -127,7 +127,7 @@ PrefabInstance:
     - target: {fileID: 7320286856794352644, guid: 487974074a3d394b387c7e029be92338, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 6470720801553259246, guid: 014f33e92ad32214ebffae830806fd7c, type: 3}
+      objectReference: {fileID: 6470720801553259246, guid: f41e7bbe14ad859409ccc334f3ff230c, type: 3}
     - target: {fileID: 7320286856794352644, guid: 487974074a3d394b387c7e029be92338, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
@@ -146,7 +146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8534882085284172725, guid: 487974074a3d394b387c7e029be92338, type: 3}
       propertyPath: m_text
-      value: Oppgave 4 - Half Adder
+      value: Opgave 4 - Half Adder
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2460264180051110163, guid: 487974074a3d394b387c7e029be92338, type: 3}

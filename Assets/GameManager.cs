@@ -13,5 +13,12 @@ public class GameManager : MonoBehaviour
         instance = this;
         activePuzzle = false;
         activeTip = false;
+        DontDestroyOnLoad(this);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+            Destroy(this.gameObject);
     }
 }

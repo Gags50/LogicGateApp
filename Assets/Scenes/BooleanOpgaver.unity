@@ -425,7 +425,7 @@ MonoBehaviour:
         m_MethodName: puzzleToggle
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7966696060163791983, guid: c49c87f6d3bc2734da7b32cd4ed33705, type: 3}
+          m_ObjectArgument: {fileID: 7029185691534084152, guid: 4f24bb12692e5db47ab85c9256836ee4, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -704,7 +704,7 @@ MonoBehaviour:
         m_MethodName: puzzleToggle
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7966696060163791983, guid: 191c974faac236d49889ecf3f77accda, type: 3}
+          m_ObjectArgument: {fileID: 7029185691534084152, guid: bc692390dfce0f742a8514b7223ce6a0, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1527,8 +1527,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 56
+  m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

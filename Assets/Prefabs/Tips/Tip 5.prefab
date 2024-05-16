@@ -65,14 +65,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Boolean algebra er en m\xE5de at ops\xE6tte kredsl\xF8b via algebraisk
-    notation.\r\n\nHer forbindes hver input af et udtryk, som korresponderer til
-    en logisk port.\r\n\nEt plus, +, repr\xE6senterer en OR-port, og er ligesom addition
-    i algebra.\r\n\nEt asterisk, *, repr\xE6senterer en AND-port, og er ligesom multiplikation
-    i algebra.\r\n\nEn cirkel med et kryds,    , repr\xE6senterer en XOR-port, og
-    kaldes eksklusiv.\r\n\nEt input eller udtryk med en linke over sig, I\u0305,
-    betyder, at inputtet eller porten er efterfulgt af en NOT-port.\r\n\nFors\xF8g
-    at danne et kredsl\xF8b ud fra udtrykket i<sub>o</sub>*i<sub>1</sub>+i<sub>2."
+  m_text: "En half adder er et simpelt kredsl\xF8b, som tager imod to inputs, og
+    giver to outputs.\r\n\nDe to outputs er sum og carry. Sum sender er output, der
+    er summen af hver input. Dette g\xE6lder dog kun, s\xE5 l\xE6nge den sum ikke
+    danner et overflow til n\xE6ste cifer i et bin\xE6rt tal.\r\n\nHvis der dannes
+    et overflow fra summen af talene, skal outputtet i stedet repr\xE6senteres af
+    carry.\r\nI denne opgave er sum og carry henholsvist repr\xE6senteret af o0 og
+    o1. \n\nKan du bygge et half adder kredsl\xF8b?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -99,8 +98,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.5
-  m_fontSizeBase: 24.5
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -171,7 +170,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8526030312630745729}
   - {fileID: 851163722094537511}
   m_Father: {fileID: 4360031711777891433}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -230,7 +228,7 @@ GameObject:
   - component: {fileID: 8103758350737520322}
   - component: {fileID: 7129120471258861460}
   m_Layer: 5
-  m_Name: Tip 3
+  m_Name: Tip 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,105 +292,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1001 &6715812029966725037
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 4972302750606346996}
-    m_Modifications:
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -43
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -58
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3480258183808217289, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-      propertyPath: m_Name
-      value: LORTE LORTE O + TEGN
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
---- !u!224 &8526030312630745729 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3126008383927702828, guid: ea7513e301db6114b8cfca92d213d868, type: 3}
-  m_PrefabInstance: {fileID: 6715812029966725037}
-  m_PrefabAsset: {fileID: 0}

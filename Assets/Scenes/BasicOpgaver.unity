@@ -784,8 +784,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 56
+  m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -866,6 +866,7 @@ MonoBehaviour:
   spawnedPuzzle: {fileID: 0}
   spawnedTip: {fileID: 0}
   activePuzzle: 1
+  activeTip: 0
 --- !u!4 &602859907
 Transform:
   m_ObjectHideFlags: 0

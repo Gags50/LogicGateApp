@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8534882085284172725, guid: 487974074a3d394b387c7e029be92338, type: 3}
       propertyPath: m_text
-      value: Oppgave 3 - XOR port
+      value: Opgave 3 - XOR port
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2460264180051110163, guid: 487974074a3d394b387c7e029be92338, type: 3}

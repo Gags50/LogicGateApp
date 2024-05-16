@@ -13,6 +13,8 @@ public class CircuitManager : MonoBehaviour
 {
     public static event Action<CircuitState> StateChange;
 
+    public static CircuitManager instance;
+
     public static string k_server = "mqtt.eclipseprojects.io";
     public static string k_clientID = Guid.NewGuid().ToString();
     public static int k_port = 1883;
@@ -21,6 +23,13 @@ public class CircuitManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+            Destroy(this.gameObject);
+
         DontDestroyOnLoad(this);
         Setup();
 
