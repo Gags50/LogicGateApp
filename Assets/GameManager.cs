@@ -6,10 +6,12 @@ public class GameManager : MonoBehaviour
     public GameObject spawnedPuzzle;
     public GameObject spawnedTip;
     public bool activePuzzle;
+    public bool activeTip;
 
     void Awake()
     {
         instance = this;
         activePuzzle = false;
+        activeTip = false;
     }
 }
