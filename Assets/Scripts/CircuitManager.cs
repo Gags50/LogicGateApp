@@ -7,13 +7,14 @@ using MQTTnet.Packets;
 using MQTTnet.Protocol;
 using System.Text;
 using System;
+using System.Linq;
 
 public class CircuitManager : MonoBehaviour
 {
     public static event Action<CircuitState> StateChange;
 
     public static string k_server = "mqtt.eclipseprojects.io";
-    public static string k_clientID = "ddu4-digitallogik-unity";
+    public static string k_clientID = Guid.NewGuid().ToString();
     public static int k_port = 1883;
     public static MqttClientOptions k_mqttOptions;
     public static IMqttClient k_mqttClient;
@@ -43,7 +44,7 @@ public class CircuitManager : MonoBehaviour
                 new CircuitState(false, true, false, false, false, false, false, false),
                 new CircuitState(true, true, false, false, true, false, false, false),
                 });
-        SendTestResultRequest(and);
+        //SendTestResultRequest(and);
     }
 
     public static async Task ConnectClient()
@@ -90,7 +91,7 @@ public class CircuitManager : MonoBehaviour
             {
                 // state change update
                 case 's':
-                    int stateInt = int.Parse(data);
+                    int stateInt = int.Parse(data.Substring(1));
                     byte state = (byte) stateInt;
                     Debug.Log(state);
 
@@ -113,7 +114,6 @@ public class CircuitManager : MonoBehaviour
                 f =>
                 {
                     f.WithTopic("DDU4/DigitalLogik/state");
-                    f.WithTopic("DDU4/DigitalLogik/testresult");
                 })
             .Build();
 
